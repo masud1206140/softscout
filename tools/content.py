@@ -11,6 +11,7 @@ NAV = [  # (slug, en label, bn label)
     ("services", "Services", "সেবাসমূহ"),
     ("process", "How we work", "কাজের ধাপ"),
     ("sample-work", "Sample work", "কাজের নমুনা"),
+    ("articles", "Articles", "নিবন্ধ"),
     ("about", "About", "আমাদের সম্পর্কে"),
     ("contact", "Contact", "যোগাযোগ"),
 ]
@@ -27,6 +28,17 @@ UI = {
         "nf_title": "Page not found",
         "nf_body": "This address doesn't match any page on softscout.support. Check the spelling, or go to the home page.",
         "nf_cta": "Go to the home page",
+        "short": "In short",
+        "faq": "Questions and answers",
+        "sources": "Sources",
+        "published": "Published",
+        "updated": "Updated",
+        "by": "By SoftScout",
+        "all_articles": "All articles",
+        "read": "Read the article",
+        "art_title": "Articles — SoftScout",
+        "art_h1": "Articles",
+        "art_lead": "Practical guides on testing websites, writing clear content and being found by search engines and AI assistants.",
     },
     "bn": {
         "menu": "মেনু",
@@ -39,6 +51,17 @@ UI = {
         "nf_title": "পাতাটি পাওয়া যায়নি",
         "nf_body": "এই ঠিকানায় softscout.support-এ কোনো পাতা নেই। বানান দেখে নিন, অথবা হোম পাতায় যান।",
         "nf_cta": "হোম পাতায় যান",
+        "short": "সংক্ষেপে",
+        "faq": "প্রশ্ন ও উত্তর",
+        "sources": "উৎস",
+        "published": "প্রকাশিত",
+        "updated": "হালনাগাদ",
+        "by": "লিখেছে সফটস্কাউট",
+        "all_articles": "সব নিবন্ধ",
+        "read": "নিবন্ধটি পড়ুন",
+        "art_title": "নিবন্ধ — সফটস্কাউট",
+        "art_h1": "নিবন্ধ",
+        "art_lead": "ওয়েবসাইট টেস্টিং, স্পষ্ট কনটেন্ট লেখা এবং সার্চ ইঞ্জিন ও এআই সহকারীর কাছে খুঁজে পাওয়ার বিষয়ে ব্যবহারিক গাইড।",
     },
 }
 
@@ -352,7 +375,7 @@ def _sample_table(lang):
         f'<tr><td>{a}</td><td>{b}</td><td><span class="sev {sev_class[c]}">{c}</span></td><td>{d}</td><td>{e}</td></tr>'
         for a, b, c, d, e in SAMPLE_ROWS[lang])
     head = "".join(f"<th scope=\"col\">{x}</th>" for x in h)
-    return f'<div class="table-wrap" tabindex="0"><table><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+    return f'<div class="table-wrap" tabindex="0"><table class="ids"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
 
 PAGES["sample-work"] = {
     "en": {

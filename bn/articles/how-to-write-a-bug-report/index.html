@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>এমন বাগ রিপোর্ট কীভাবে লিখবেন যা ঠিক করা হয় — SoftScout</title>
+<meta name="description" content="একটি ভালো বাগ রিপোর্টে কী থাকে, কপি করার মতো টেমপ্লেট, এবং একটি সহজ গুরুত্ব-মাপকাঠি, যাতে ডেভেলপার প্রশ্ন না করেই সমস্যা ঠিক করতে পারেন।">
+<link rel="canonical" href="https://softscout.support/bn/articles/how-to-write-a-bug-report/">
+<link rel="alternate" hreflang="en" href="https://softscout.support/articles/how-to-write-a-bug-report/"><link rel="alternate" hreflang="bn" href="https://softscout.support/bn/articles/how-to-write-a-bug-report/"><link rel="alternate" hreflang="x-default" href="https://softscout.support/articles/how-to-write-a-bug-report/">
+<meta property="og:title" content="এমন বাগ রিপোর্ট কীভাবে লিখবেন যা ঠিক করা হয় — SoftScout">
+<meta property="og:description" content="একটি ভালো বাগ রিপোর্টে কী থাকে, কপি করার মতো টেমপ্লেট, এবং একটি সহজ গুরুত্ব-মাপকাঠি, যাতে ডেভেলপার প্রশ্ন না করেই সমস্যা ঠিক করতে পারেন।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://softscout.support/bn/articles/how-to-write-a-bug-report/">
+<meta name="theme-color" content="#1d2733">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "এমন বাগ রিপোর্ট কীভাবে লিখবেন যা ঠিক করা হয়", "description": "একটি ভালো বাগ রিপোর্টে কী থাকে, কপি করার মতো টেমপ্লেট, এবং একটি সহজ গুরুত্ব-মাপকাঠি, যাতে ডেভেলপার প্রশ্ন না করেই সমস্যা ঠিক করতে পারেন।", "inLanguage": "bn", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "mainEntityOfPage": "https://softscout.support/bn/articles/how-to-write-a-bug-report/", "url": "https://softscout.support/bn/articles/how-to-write-a-bug-report/", "author": {"@type": "Organization", "name": "SoftScout", "url": "https://softscout.support/"}, "publisher": {"@type": "Organization", "name": "SoftScout", "url": "https://softscout.support/", "logo": {"@type": "ImageObject", "url": "https://softscout.support/favicon.svg"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "bn", "mainEntity": [{"@type": "Question", "name": "গুরুত্ব (severity) আর অগ্রাধিকার (priority)-এর পার্থক্য কী?", "acceptedAnswer": {"@type": "Answer", "text": "গুরুত্ব বোঝায় একটি বাগ ব্যবহারকারীর কতটা ক্ষতি করে। অগ্রাধিকার হলো টিম কোন ক্রমে বাগ ঠিক করবে, যা সময়সীমা, পরিশ্রম ও ব্যবসার প্রয়োজনের ওপরও নির্ভর করে। হোম পাতার একটি ছোট বানান ভুলও উচ্চ অগ্রাধিকার পেতে পারে।"}}, {"@type": "Question", "name": "ভিডিও দেব নাকি স্ক্রিনশট?", "acceptedAnswer": {"@type": "Answer", "text": "এক মুহূর্তে দেখা যায় এমন কিছুর জন্য স্ক্রিনশট দিন, যেমন ভুল লেখা। নড়াচড়া বা কয়েকটি ধাপ আছে এমন কিছুর জন্য ছোট রেকর্ডিং দিন, যেমন এমন বাটন যা চাপলে কিছু হয় না।"}}, {"@type": "Question", "name": "বাগটি যদি আবার ঘটাতে না পারি?", "acceptedAnswer": {"@type": "Answer", "text": "তবুও রিপোর্ট করুন, জানান একবার ঘটেছে, এবং যা মনে আছে সব দিন: সময়, পাতা, ডিভাইস ও তখন কী করছিলেন। মাঝে মাঝে ঘটা বাগগুলো প্রায়ই সবচেয়ে গুরুত্বপূর্ণ।"}}]}</script>
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body class="lang-bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<div class="shell">
+<header class="side" id="side">
+  <div class="side-top">
+    <a class="brand" href="/bn/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="9.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M8.5 13.2l3 3 5.6-6" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2 20.2L28 28" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg><span>SoftScout</span></a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" data-open="মেনু" data-close="মেনু বন্ধ করুন">
+      <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">মেনু</span>
+    </button>
+  </div>
+  <nav class="site-nav" id="site-nav" aria-label="মেনু">
+    <ul>
+<li><a href="/bn/">হোম</a></li>
+<li><a href="/bn/services/">সেবাসমূহ</a></li>
+<li><a href="/bn/process/">কাজের ধাপ</a></li>
+<li><a href="/bn/sample-work/">কাজের নমুনা</a></li>
+<li><a href="/bn/articles/" aria-current="page">নিবন্ধ</a></li>
+<li><a href="/bn/about/">আমাদের সম্পর্কে</a></li>
+<li><a href="/bn/contact/">যোগাযোগ</a></li>
+    </ul>
+    <div class="side-foot">
+      <a class="lang" href="/articles/how-to-write-a-bug-report/" hreflang="en" lang="en" aria-label="এই পাতাটি ইংরেজিতে পড়ুন">English</a>
+      <a class="side-mail" href="mailto:contact@softscout.support?subject=%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9F%20%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87">contact@softscout.support</a>
+    </div>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>এমন বাগ রিপোর্ট কীভাবে লিখবেন যা ঠিক করা হয়</h1>
+      <p class="art-meta">লিখেছে সফটস্কাউট. প্রকাশিত <time datetime="2026-11-24">২৪ নভেম্বর ২০২৬</time>.</p>
+      
+    </div>
+    
+  </div>
+  
+<section class="block art-short"><h2>সংক্ষেপে</h2><p>ভালো বাগ রিপোর্ট এমন যে, যিনি সেখানে ছিলেন না তিনিও নিজে সমস্যাটি দেখতে পারেন। একটি স্পষ্ট শিরোনাম, পাতার ঠিকানা, আবার ঘটানোর ক্রমিক ধাপ, কী আশা করেছিলেন আর আসলে কী ঘটেছে, স্ক্রিনশট বা রেকর্ডিং, ডিভাইস ও ব্রাউজার, এবং কতটা গুরুতর — এসব দিন। প্রতিটি এন্ট্রিতে একটি সমস্যা।</p></section>
+<article class="block art-body">
+<h2>বেশিরভাগ বাগ রিপোর্ট কেন উপেক্ষিত হয়</h2>
+<p>"ফর্ম কাজ করছে না" — এই কথায় ডেভেলপার কিছু করতে পারেন না। কোন ফর্ম? কোন পাতায়? কী লিখেছিলেন? বদলে কী ঘটেছে? যিনি ঠিক করবেন তাঁকে যদি প্রশ্ন নিয়ে ফিরে আসতে হয়, রিপোর্টটি সারিতে পড়ে থাকে। যে রিপোর্ট শুরুতেই এসব প্রশ্নের উত্তর দেয়, সেটি সাধারণত আগে ঠিক হয়।</p>
+
+<h2>ভালো রিপোর্টের আটটি অংশ</h2>
+<dl class="defs">
+  <div><dt>শিরোনাম</dt><dd>কী ভেঙেছে এবং কোথায়, এক লাইনে। "চেকআউট: আইফোন সাফারিতে পে বাটনে কিছু হয় না" — "পেমেন্ট বাগ"-এর চেয়ে অনেক ভালো।</dd></div>
+  <div><dt>পাতার ঠিকানা</dt><dd>যে পাতায় ঘটে তার পুরো URL।</dd></div>
+  <div><dt>আবার ঘটানোর ধাপ</dt><dd>একটি স্পষ্ট শুরুর জায়গা থেকে ক্রমিক ধাপ। কী লিখেছেন বা বেছেছেন তা-ও দিন।</dd></div>
+  <div><dt>প্রত্যাশিত ফল</dt><dd>কী হওয়ার কথা ছিল।</dd></div>
+  <div><dt>আসল ফল</dt><dd>বদলে কী ঘটেছে, কোনো ত্রুটির বার্তা থাকলে হুবহু।</dd></div>
+  <div><dt>প্রমাণ</dt><dd>সমস্যার জায়গা চিহ্নিত স্ক্রিনশট, অথবা নড়াচড়া আছে এমন কিছুর জন্য ছোট স্ক্রিন রেকর্ডিং।</dd></div>
+  <div><dt>পরিবেশ</dt><dd>ডিভাইস, অপারেটিং সিস্টেম, ব্রাউজার ও সংস্করণ, এবং লগ-ইন অবস্থায় ছিলেন কি না।</dd></div>
+  <div><dt>গুরুত্ব</dt><dd>ব্যবহারকারীর কতটা ক্ষতি হয় (নিচের মাপকাঠি দেখুন)।</dd></div>
+</dl>
+
+<h2>কপি করার মতো টেমপ্লেট</h2>
+<pre class="template"><code>শিরোনাম:     [পাতা]: [কী ভুল] — [ডিভাইস/ব্রাউজার]
+পাতা:        https://
+ধাপ:         ১.
+             ২.
+             ৩.
+প্রত্যাশিত:
+আসল ফল:
+প্রমাণ:      [স্ক্রিনশট / রেকর্ডিংয়ের লিংক]
+পরিবেশ:      [ডিভাইস], [OS + সংস্করণ], [ব্রাউজার + সংস্করণ], লগ-ইন: হ্যাঁ/না
+গুরুত্ব:      উচ্চ / মাঝারি / নিম্ন
+কতবার:       প্রতিবার / মাঝে মাঝে (y বারের মধ্যে x বার)</code></pre>
+
+<h2>একটি সহজ গুরুত্ব-মাপকাঠি</h2>
+<ul>
+  <li><strong>উচ্চ:</strong> মানুষকে প্রধান কাজ (কেনা, সাইন-আপ, যোগাযোগ) শেষ করতে বাধা দেয়, তথ্য হারায়, অথবা ভুল দাম বা আইনি তথ্য দেখায়।</li>
+  <li><strong>মাঝারি:</strong> কাজটি করা যায়, কিন্তু বিভ্রান্তিকর, ধীর, বা ঘুরপথ লাগে; অথবা হেল্প পাতা ভুল নির্দেশনা দেয়।</li>
+  <li><strong>নিম্ন:</strong> দেখতে কেমন লাগে বা ছোটখাটো লেখার সমস্যা, যা কাউকে আটকায় না।</li>
+</ul>
+<p>গুরুত্ব (severity) হলো ব্যবহারকারীর ওপর প্রভাব। অগ্রাধিকার (priority) — কোনটি আগে ঠিক হবে — সেটি টিমের সিদ্ধান্ত, যা সময়সীমা ও পরিশ্রমের ওপরও নির্ভর করে।</p>
+
+<h2>ভালো অভ্যাস</h2>
+<ul>
+  <li>প্রতি রিপোর্টে একটি সমস্যা। এক রিপোর্টে দুটি থাকলে একটি ভুলে যাওয়া হয়।</li>
+  <li>রিপোর্টের আগে দুবার চেষ্টা করুন, এবং জানান প্রতিবার ঘটে নাকি মাঝে মাঝে।</li>
+  <li>ত্রুটির বার্তা হুবহু লিখুন; নিজের ভাষায় বদলাবেন না।</li>
+  <li>নতুন রিপোর্ট দেওয়ার আগে দেখুন এটি আগেই রিপোর্ট হয়েছে কি না।</li>
+  <li>স্ক্রিনশটে টেস্ট অ্যাকাউন্ট ও নকল ডেটা ব্যবহার করুন; আসল ক্রেতার তথ্য কখনো শেয়ার করবেন না।</li>
+  <li>সমাধান তৈরি হলে আবার যাচাই করুন এবং নিজেই রিপোর্টটি বন্ধ করুন।</li>
+</ul>
+
+<h2>উদাহরণ</h2>
+<p><strong>শিরোনাম:</strong> প্রোডাক্ট পাতা: দাম কার্টের দামের সাথে মেলে না (৳২,৪৫০ বনাম ৳২,৬৫০)<br>
+<strong>ধাপ:</strong> ১. প্রোডাক্ট পাতা খুলুন। ২. দাম দেখে রাখুন। ৩. "কার্টে যোগ করুন" চাপুন। ৪. কার্ট খুলুন।<br>
+<strong>প্রত্যাশিত:</strong> কার্টে ৳২,৪৫০। <strong>আসল ফল:</strong> কার্টে ৳২,৬৫০।<br>
+<strong>পরিবেশ:</strong> অ্যান্ড্রয়েড ১৫, ক্রোম ১৩১, লগ-ইন নয়। <strong>গুরুত্ব:</strong> উচ্চ। <strong>কতবার:</strong> প্রতিবার।</p>
+<p>এই উদাহরণটি বোঝানোর জন্য বানানো। আরও দেখুন আমাদের <a href="/bn/sample-work/">কাজের নমুনা</a> পাতায়।</p>
+</article>
+<section class="block faq"><h2>প্রশ্ন ও উত্তর</h2><details><summary>গুরুত্ব (severity) আর অগ্রাধিকার (priority)-এর পার্থক্য কী?</summary><p>গুরুত্ব বোঝায় একটি বাগ ব্যবহারকারীর কতটা ক্ষতি করে। অগ্রাধিকার হলো টিম কোন ক্রমে বাগ ঠিক করবে, যা সময়সীমা, পরিশ্রম ও ব্যবসার প্রয়োজনের ওপরও নির্ভর করে। হোম পাতার একটি ছোট বানান ভুলও উচ্চ অগ্রাধিকার পেতে পারে।</p></details><details><summary>ভিডিও দেব নাকি স্ক্রিনশট?</summary><p>এক মুহূর্তে দেখা যায় এমন কিছুর জন্য স্ক্রিনশট দিন, যেমন ভুল লেখা। নড়াচড়া বা কয়েকটি ধাপ আছে এমন কিছুর জন্য ছোট রেকর্ডিং দিন, যেমন এমন বাটন যা চাপলে কিছু হয় না।</p></details><details><summary>বাগটি যদি আবার ঘটাতে না পারি?</summary><p>তবুও রিপোর্ট করুন, জানান একবার ঘটেছে, এবং যা মনে আছে সব দিন: সময়, পাতা, ডিভাইস ও তখন কী করছিলেন। মাঝে মাঝে ঘটা বাগগুলো প্রায়ই সবচেয়ে গুরুত্বপূর্ণ।</p></details></section>
+
+<p><a href="/bn/articles/">সব নিবন্ধ</a></p>
+  <footer class="foot">
+    <p>সফটস্কাউট — ওয়েবসাইট টেস্টিং ও মার্কেটিং সহায়তা।</p>
+    <p><a href="mailto:contact@softscout.support?subject=%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A7%87%E0%A6%AC%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%9F%20%E0%A6%AC%E0%A6%BF%E0%A6%B7%E0%A6%AF%E0%A6%BC%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87">contact@softscout.support</a></p>
+  </footer>
+</main>
+</div>
+</body>
+</html>

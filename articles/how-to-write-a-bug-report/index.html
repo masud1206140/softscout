@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to write a bug report that gets fixed — SoftScout</title>
+<meta name="description" content="What a good bug report contains, a copy-ready template, and a simple severity scale so developers can fix problems without asking questions.">
+<link rel="canonical" href="https://softscout.support/articles/how-to-write-a-bug-report/">
+<link rel="alternate" hreflang="en" href="https://softscout.support/articles/how-to-write-a-bug-report/"><link rel="alternate" hreflang="bn" href="https://softscout.support/bn/articles/how-to-write-a-bug-report/"><link rel="alternate" hreflang="x-default" href="https://softscout.support/articles/how-to-write-a-bug-report/">
+<meta property="og:title" content="How to write a bug report that gets fixed — SoftScout">
+<meta property="og:description" content="What a good bug report contains, a copy-ready template, and a simple severity scale so developers can fix problems without asking questions.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://softscout.support/articles/how-to-write-a-bug-report/">
+<meta name="theme-color" content="#1d2733">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to write a bug report that gets fixed", "description": "What a good bug report contains, a copy-ready template, and a simple severity scale so developers can fix problems without asking questions.", "inLanguage": "en", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "mainEntityOfPage": "https://softscout.support/articles/how-to-write-a-bug-report/", "url": "https://softscout.support/articles/how-to-write-a-bug-report/", "author": {"@type": "Organization", "name": "SoftScout", "url": "https://softscout.support/"}, "publisher": {"@type": "Organization", "name": "SoftScout", "url": "https://softscout.support/", "logo": {"@type": "ImageObject", "url": "https://softscout.support/favicon.svg"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is the difference between severity and priority?", "acceptedAnswer": {"@type": "Answer", "text": "Severity describes how much a bug harms users. Priority is the order in which the team will fix bugs, which also depends on deadlines, effort and business needs. A low-severity typo on the home page can still get high priority."}}, {"@type": "Question", "name": "Should I include a video or a screenshot?", "acceptedAnswer": {"@type": "Answer", "text": "Use a screenshot for something you can see in one moment, such as wrong text. Use a short recording for anything that involves movement or several steps, such as a button that does nothing when tapped."}}, {"@type": "Question", "name": "What if I can't make the bug happen again?", "acceptedAnswer": {"@type": "Answer", "text": "Report it anyway, say it happened once, and include everything you remember: the time, the page, the device and what you were doing. Intermittent bugs are often the most important ones."}}]}</script>
+<script>document.documentElement.classList.add("js")</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body class="lang-en">
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+<header class="side" id="side">
+  <div class="side-top">
+    <a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="13" r="9.5" fill="none" stroke="currentColor" stroke-width="3"/><path d="M8.5 13.2l3 3 5.6-6" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2 20.2L28 28" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/></svg><span>SoftScout</span></a>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" data-open="Menu" data-close="Close menu">
+      <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-label">Menu</span>
+    </button>
+  </div>
+  <nav class="site-nav" id="site-nav" aria-label="Menu">
+    <ul>
+<li><a href="/">Home</a></li>
+<li><a href="/services/">Services</a></li>
+<li><a href="/process/">How we work</a></li>
+<li><a href="/sample-work/">Sample work</a></li>
+<li><a href="/articles/" aria-current="page">Articles</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/contact/">Contact</a></li>
+    </ul>
+    <div class="side-foot">
+      <a class="lang" href="/bn/articles/how-to-write-a-bug-report/" hreflang="bn" lang="bn" aria-label="Read this page in Bengali">বাংলা</a>
+      <a class="side-mail" href="mailto:contact@softscout.support?subject=Website%20enquiry">contact@softscout.support</a>
+    </div>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>How to write a bug report that gets fixed</h1>
+      <p class="art-meta">By SoftScout. Published <time datetime="2026-11-24">24 November 2026</time>.</p>
+      
+    </div>
+    
+  </div>
+  
+<section class="block art-short"><h2>In short</h2><p>A good bug report lets someone who wasn&#x27;t there see the problem for themselves. Give it a clear title, the page address, numbered steps to repeat it, what you expected and what actually happened, a screenshot or recording, the device and browser, and how serious it is. Report one problem per entry.</p></section>
+<article class="block art-body">
+<h2>Why most bug reports get ignored</h2>
+<p>"The form doesn't work" is not something a developer can act on. Which form? On which page? What did you type? What happened instead? If the person fixing it has to come back with questions, the report waits in a queue. A report that answers those questions upfront usually gets fixed first.</p>
+
+<h2>The eight parts of a good report</h2>
+<dl class="defs">
+  <div><dt>Title</dt><dd>What is broken and where, in one line. "Checkout: Pay button does nothing on iPhone Safari" beats "Payment bug".</dd></div>
+  <div><dt>Page address</dt><dd>The full URL where it happens.</dd></div>
+  <div><dt>Steps to repeat</dt><dd>Numbered steps from a clear starting point. Include what you typed or selected.</dd></div>
+  <div><dt>Expected result</dt><dd>What should have happened.</dd></div>
+  <div><dt>Actual result</dt><dd>What happened instead, including any error message word for word.</dd></div>
+  <div><dt>Evidence</dt><dd>A screenshot with the problem area marked, or a short screen recording for anything that moves.</dd></div>
+  <div><dt>Environment</dt><dd>Device, operating system, browser and version, and whether you were logged in.</dd></div>
+  <div><dt>Severity</dt><dd>How much it hurts users (see the scale below).</dd></div>
+</dl>
+
+<h2>Template you can copy</h2>
+<pre class="template"><code>Title:        [Page]: [what is wrong] on [device/browser]
+Page:         https://
+Steps:        1.
+              2.
+              3.
+Expected:
+Actual:
+Evidence:     [screenshot / recording link]
+Environment:  [device], [OS + version], [browser + version], logged in: yes/no
+Severity:     High / Medium / Low
+How often:    Every time / Sometimes (x of y tries)</code></pre>
+
+<h2>A simple severity scale</h2>
+<ul>
+  <li><strong>High:</strong> stops people completing a main task (buying, signing up, contacting you), loses data, or shows wrong prices or legal information.</li>
+  <li><strong>Medium:</strong> the task can be done, but it is confusing, slow, or needs a workaround; or a help page gives wrong directions.</li>
+  <li><strong>Low:</strong> cosmetic or minor wording problems that do not stop anyone.</li>
+</ul>
+<p>Severity is about the effect on users. Priority (what gets fixed first) is the team's decision and can also depend on deadlines and effort.</p>
+
+<h2>Good habits</h2>
+<ul>
+  <li>One problem per report. Two problems in one report means one of them gets forgotten.</li>
+  <li>Try it twice before reporting, and say if it happens every time or only sometimes.</li>
+  <li>Write the error message exactly; don't paraphrase it.</li>
+  <li>Check whether it already has a report before adding a new one.</li>
+  <li>Use test accounts and fake data in screenshots; never share real customers' details.</li>
+  <li>When the fix is ready, check it again and close the report yourself.</li>
+</ul>
+
+<h2>Example</h2>
+<p><strong>Title:</strong> Product page: price differs from cart price (৳2,450 vs ৳2,650)<br>
+<strong>Steps:</strong> 1. Open the product page. 2. Note the price. 3. Tap "Add to cart". 4. Open the cart.<br>
+<strong>Expected:</strong> Cart shows ৳2,450. <strong>Actual:</strong> Cart shows ৳2,650.<br>
+<strong>Environment:</strong> Android 15, Chrome 131, not logged in. <strong>Severity:</strong> High. <strong>How often:</strong> Every time.</p>
+<p>This example is illustrative. See more on our <a href="/sample-work/">sample work</a> page.</p>
+</article>
+<section class="block faq"><h2>Questions and answers</h2><details><summary>What is the difference between severity and priority?</summary><p>Severity describes how much a bug harms users. Priority is the order in which the team will fix bugs, which also depends on deadlines, effort and business needs. A low-severity typo on the home page can still get high priority.</p></details><details><summary>Should I include a video or a screenshot?</summary><p>Use a screenshot for something you can see in one moment, such as wrong text. Use a short recording for anything that involves movement or several steps, such as a button that does nothing when tapped.</p></details><details><summary>What if I can&#x27;t make the bug happen again?</summary><p>Report it anyway, say it happened once, and include everything you remember: the time, the page, the device and what you were doing. Intermittent bugs are often the most important ones.</p></details></section>
+
+<p><a href="/articles/">All articles</a></p>
+  <footer class="foot">
+    <p>SoftScout — website testing and marketing support.</p>
+    <p><a href="mailto:contact@softscout.support?subject=Website%20enquiry">contact@softscout.support</a></p>
+  </footer>
+</main>
+</div>
+</body>
+</html>

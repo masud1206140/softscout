@@ -174,7 +174,7 @@ table { border-collapse: collapse; width: 100%; min-width: 40rem; font-size: .95
 th, td { text-align: left; vertical-align: top; padding: .65rem .8rem; border-bottom: 1px solid var(--line); }
 th { background: color-mix(in srgb, var(--ink) 6%, var(--paper)); font-weight: 700; }
 tr:last-child td { border-bottom: 0; }
-td:first-child { white-space: nowrap; font-weight: 700; }
+.ids td:first-child { white-space: nowrap; font-weight: 700; }
 .sev { display: inline-block; font-weight: 700; font-size: .85rem; padding: .05rem .5rem; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; }
 .sev.high { color: var(--fail); } .sev.med { color: var(--warn); } .sev.low { color: var(--muted); }
 
@@ -184,3 +184,30 @@ td:first-child { white-space: nowrap; font-weight: 700; }
 
 .foot { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
 .foot p { margin: .2rem 0; }
+
+/* ---------- Articles ---------- */
+.art-meta { color: var(--muted); font-size: .95rem; margin: 0 0 1rem; }
+.art-short { background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 8px; padding: 1.1rem 1.25rem; margin-bottom: 1rem; }
+.art-short h2 { font-size: 1.05rem; margin-bottom: .35rem; }
+.art-short p { margin: 0; }
+.art-body h2 { margin-top: 1.8em; }
+.art-body h2:first-child { margin-top: 0; }
+.art-body .table-wrap table { min-width: 28rem; }
+.defs { margin: 0; display: grid; gap: .75rem; }
+.defs > div { display: grid; gap: .1rem; }
+@media (min-width: 760px) { .defs > div { grid-template-columns: 11rem 1fr; gap: 1rem; } }
+.defs dt { font-weight: 700; } .defs dd { margin: 0; }
+pre.template { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.1rem; overflow-x: auto; font-size: .9rem; line-height: 1.55; }
+pre.template code, code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; }
+code { font-size: .92em; }
+.faq details { border-top: 1px solid var(--line); padding: .75rem 0; max-width: 68ch; }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 700; }
+.faq details p { margin: .5rem 0 0; }
+.sources { padding-left: 1.3rem; } .sources li { overflow-wrap: anywhere; }
+.art-list { list-style: none; padding: 0; margin: 0; }
+.art-list li { padding: 0 0 1.4rem; margin: 0 0 1.4rem; border-bottom: 1px solid var(--line); max-width: 68ch; }
+.art-list li:last-child { border-bottom: 0; margin-bottom: 0; }
+.art-list h2 { font-size: 1.3rem; margin-bottom: .35rem; }
+.art-list h2 a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+.art-list p { margin: .2rem 0; }
